@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 from IPython.display import display, Markdown # Allows the use of display() for DataFrames
 
 
+st.title('''Finding Donors for CharityML''')
+
 st.image('donors_image.png')
 
-st.write('''## Getting Started
-
-In this project, I employ several supervised algorithms to accurately model individuals' income using data.
+st.write(''' In this project, I employ several supervised algorithms to accurately model individuals' income using data.
           I will then choose the best candidate algorithm from preliminary results and further optimize this algorithm to best model the data.
           The goal with this implementation is to construct a model that accurately predicts whether an individual makes more than $50,000.
           This sort of task can arise in a non-profit setting, where organizations survive on donations.  Understanding an individual's income 

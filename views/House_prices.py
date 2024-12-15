@@ -1,7 +1,7 @@
 
 
 import streamlit as st
-st.write(f'## Predicting Boston house prices')  
+st.title(' Predicting Boston house prices')  
 
 st.image('Boston_houses_USA.png', width=800)
 
@@ -386,8 +386,8 @@ client_data = [[5, 17, 15],
               [8, 3, 12]]
 
 for i, number in enumerate(reg.predict(client_data)):
-                          st.write(f'Predicted selling price\
-                                    for Client {i+1}: ${number:,.0f}')
+                          st.write(f'''Predicted selling price
+                                    for Client {i+1}: ${number:,.0f}''')
 
 
 code='''
