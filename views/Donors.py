@@ -57,11 +57,11 @@ st.dataframe(data)
 
 st.write('''### Data Exploration
 A cursory investigation of the dataset will determine how many individuals fit into either group, and will tell us about 
-         the percentage of these individuals making more than \$50,000. I will compute the following:
+         the percentage of these individuals making more than 50,000 USD. I will compute the following:
 - The total number of records, `'n_records'`
-- The number of individuals making more than \$50,000 annually, `'n_greater_50k'`.
-- The number of individuals making at most \$50,000 annually, `'n_at_most_50k'`.
-- The percentage of individuals making more than \$50,000 annually, `'greater_percent'`.''')
+- The number of individuals making more than $50,000 USD annually, `'n_greater_50k'`.
+- The number of individuals making at most $50,000 USD annually, `'n_at_most_50k'`.
+- The percentage of individuals making more than $50,000 USD annually, `'greater_percent'`.''')
 
 
 
@@ -757,8 +757,7 @@ for clf in [clf_A, clf_B, clf_C]:
     clf_name = clf.__class__.__name__
     results[clf_name] = {}
     for i, samples in enumerate([samples_1, samples_10, samples_100]):
-        results[clf_name][i] = \
-        train_predict(clf, samples, X_train, y_train, X_test, y_test)
+        results[clf_name][i] = train_predict(clf, samples, X_train, y_train, X_test, y_test)
 
 
 
@@ -846,14 +845,14 @@ st.write('''### Question 3 - Choosing the Best Model''')
 st.write('''
 I select the AdaBoostClassifier as the top-performing model among the three options for the classification task of distinguishing individuals with incomes exceeding 50,000 USD.
 
-`Accuracy`: Examining the bottom-middle plot, the AdaBoost Classifier achieved the highest accuracy score, surpassing 80\%, which was notably
+`Accuracy`: Examining the bottom-middle plot, the AdaBoost Classifier achieved the highest accuracy score, surpassing 80%, which was notably
           superior to both the Logistic Regression and the Decision Tree Classifier. Additionally, the AdaBoost Classifier maintained a
-          superior accuracy score when using either 1\% or 10\% of the testing set. It's worth noting that, although the Decision Tree
+          superior accuracy score when using either 1% or 10% of the testing set. It's worth noting that, although the Decision Tree
           Classifier achieved the highest accuracy on training sets of all sizes, it exhibited a significantly lower accuracy score, indicating potential overfitting.
 
-`F-score`: Most importantly, the AdaBoost algorithm delivered the highest F-score of approximately 70\% on the test dataset,
+`F-score`: Most importantly, the AdaBoost algorithm delivered the highest F-score of approximately 70% on the test dataset,
           consistently outperforming the other two models across all three dataset sizes. The bottom-right plot illustrates
-          the AdaBoostClassifier (highlighted in red) achieving the highest F-score on 1\%, 10\%, or 100\% of the test dataset.
+          the AdaBoostClassifier (highlighted in red) achieving the highest F-score on 1%, 10%, or 100% of the test dataset.
 
 While the AdaBoost Classifier required slightly more time than the other two models for both training and prediction,
           the absolute time costs were minimal: less than 2 seconds for training and less than 1/10 of a second for prediction. 
@@ -912,7 +911,7 @@ end = time()
 print("Unoptimized model")
 print("Accuracy score on testing data: {:.2%}".format(accuracy_score(y_test, predictions)))
 print("F-score on testing data: {:.2%}".format(fbeta_score(y_test, predictions, beta = 0.5)))
-print("\nOptimized Model")
+print("Optimized Model")
 print("Final accuracy score on the testing data: {:.2%}".format(accuracy_score(y_test, best_predictions)))
 print("Final F-score on the testing data: {:.2%}".format(fbeta_score(y_test, best_predictions, beta = 0.5)))
 
@@ -1128,10 +1127,10 @@ clf = (clone(best_clf)).fit(X_train_reduced, y_train)
 reduced_predictions = clf.predict(X_test_reduced)
 
 # Report scores from the final model using both versions of data
-print("Final Model trained on full data\n------")
+print("Final Model trained on full data")
 print("Accuracy on testing data: {:.2%}".format(accuracy_score(y_test, best_predictions)))
 print("F-score on testing data: {:.2%}".format(fbeta_score(y_test, best_predictions, beta = 0.5)))
-print("\nFinal Model trained on reduced data\n------")
+print("Final Model trained on reduced data")
 print("Accuracy on testing data: {:.2%}".format(accuracy_score(y_test, reduced_predictions)))
 print("F-score on testing data: {:.2%}".format(fbeta_score(y_test, reduced_predictions, beta = 0.5)))'''
 st.code(code)
