@@ -9,7 +9,7 @@ from IPython.display import display, Markdown # Allows the use of display() for 
 
 st.title('''Finding Donors for CharityML''')
 
-st.image('images/donors_image.png')
+st.image('images/donors_image.png') 
 
 st.write(''' In this project, I employ several supervised algorithms to accurately model individuals' income using data.
           I will then choose the best candidate algorithm from preliminary results and further optimize this algorithm to best model the data.
@@ -931,7 +931,7 @@ from sklearn.metrics import  make_scorer
 clf = AdaBoostClassifier(estimator = DecisionTreeClassifier(), random_state=40)
 
 # Create the parameters list you wish to tune, using a dictionary if needed.
-parameters = {'n_estimators': [4, 10]
+parameters = {'n_estimators': [4, 20]
              ,'learning_rate': [0.1, 1.]}
 
 
