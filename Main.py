@@ -35,7 +35,7 @@ project4 = st.Page(
 
 project5 = st.Page(
     page="views/Movies.py",
-    title = 'Netflix Movies 🔜  🔧 🔨',
+    title = 'Netflix 🔜  🔧 🔨',
     icon='🍿'
 )
 
@@ -43,8 +43,9 @@ project5 = st.Page(
 pg= st.navigation({
     "Info": [main_page],
      "Supervised Machine Learning": [project1, project2],
-     "Unsupervised Machine Learning": [ project3, project5],
-     "Deep Learning": [ project4] })
+     "Unsupervised Machine Learning": [ project4, project5],
+     "Deep Learning": [ project3] ,
+     "Data Engineering with Microsoft Azure": []})
 
 pg.run()
 

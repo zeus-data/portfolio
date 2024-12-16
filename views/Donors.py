@@ -9,7 +9,7 @@ from IPython.display import display, Markdown # Allows the use of display() for 
 
 st.title('''Finding Donors for CharityML''')
 
-st.image('donors_image.png')
+st.image('images/donors_image.png')
 
 st.write(''' In this project, I employ several supervised algorithms to accurately model individuals' income using data.
           I will then choose the best candidate algorithm from preliminary results and further optimize this algorithm to best model the data.
@@ -965,10 +965,10 @@ end = time()
 # Report the before-and-afterscores
 st.write('''##### Unoptimized model''')
 st.write(''' `Accuracy` score on `testing` data: {:.2%}'''.format(accuracy_score(y_test, predictions)))
-st.write(''' F-score on testing data: {:.2%}'''.format(fbeta_score(y_test, predictions, beta = 0.5)))
+st.write(''' `F-score` on `testing data`: {:.2%}'''.format(fbeta_score(y_test, predictions, beta = 0.5)))
 st.write('''##### Optimized Model''')
-st.write(''' Final accuracy score on the testing data: {:.2%}'''.format(accuracy_score(y_test, best_predictions)))
-st.write(''' Final F-score on the testing data: {:.2%}'''.format(fbeta_score(y_test, best_predictions, beta = 0.5)))
+st.write(''' Final `accuracy` score on the `testing` data: {:.2%}'''.format(accuracy_score(y_test, best_predictions)))
+st.write(''' Final `F-score` on the `testing` data: {:.2%}'''.format(fbeta_score(y_test, best_predictions, beta = 0.5)))
 
 st.write('''It took ''',round((end - start)/60,2),'''minutes to run `GridSearchCV`.''')
 st.write('''The optimized model:''')
@@ -976,7 +976,7 @@ st.write(best_clf)
 
 
 
-st.write('''### Question 5 - Final Model Evaluation
+st.write('''### Final Model Evaluation
 
 * What is the optimized model's accuracy and F-score on the testing data? 
 * Are these scores better or worse than the unoptimized model? 
