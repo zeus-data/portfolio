@@ -878,7 +878,7 @@ from sklearn.metrics import  make_scorer
 clf = AdaBoostClassifier(estimator = DecisionTreeClassifier(), random_state=40)
 
 # Create the parameters list you wish to tune, using a dictionary if needed.
-parameters = {'n_estimators': [4, 10]
+parameters = {'n_estimators': [4, 20]
              ,'learning_rate': [0.1, 1.]}
 
 
@@ -994,7 +994,7 @@ st.write(f'''#### Results:
 
 st.write(f'''
 By using GridSearchCV, I optimised the AdaBoost algorithm by testing different number of learners created.
-          Specifically, GridSearchCV created 4 and 10 learners  and used 0.1 and 1 learning rates and investigated
+          Specifically, GridSearchCV created 4 and 20 learners  and used 0.1 and 1 learning rates and investigated
           when AdaBoost achieved its best performance by looking at the accuracy score and the F-score. 
 The optimised model achieved {accuracy_score(y_test, best_predictions):.1%}  ( against {accuracy_score(y_test, predictions):.1%} ) accuracy score
  and an F-score {fbeta_score(y_test, best_predictions, beta = 0.5):.1%} vs the unoptimized model's {fbeta_score(y_test, predictions, beta = 0.5):.1%}.
