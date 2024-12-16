@@ -41,7 +41,7 @@ project5 = st.Page(
 
 project6 = st.Page(
     page="views/DW.py",
-    title = 'Data Warehouse with Azure Synapse 🔜  🔧 🔨',
+    title = 'DW w/ Azure Synapse 🔜  🔧 🔨',
     icon='🏢'
 )
 
