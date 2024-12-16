@@ -39,13 +39,18 @@ project5 = st.Page(
     icon='🍿'
 )
 
+project6 = st.Page(
+    page="views/DW.py",
+    title = 'Data Warehouse with Azure Synapse 🔜  🔧 🔨',
+    icon='🏢'
+)
 
 pg= st.navigation({
     "Info": [main_page],
      "Supervised Machine Learning": [project1, project2],
      "Unsupervised Machine Learning": [ project4, project5],
      "Deep Learning": [ project3] ,
-     "Data Engineering with Microsoft Azure": []})
+     "Data Engineering with Microsoft Azure": [project6]})
 
 pg.run()
 
