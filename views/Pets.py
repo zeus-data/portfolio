@@ -2,7 +2,7 @@ import streamlit as st
 
 st.write('''#### Work in Progress . . . ''')
 
-st.image('atlantis.png')
+st.image('images/atlantis.png')
 
 # st.write('''## Convolutional Neural Networks and an Algorithm for a Dog Identification App ''')
 
