@@ -6,7 +6,6 @@ matplotlib
 IPython
 scikit-learn
 keras
-glob
 opencv-python
 h5py
 scipy
