@@ -5,3 +5,15 @@ seaborn
 matplotlib
 IPython
 scikit-learn
+keras
+glob
+opencv-python
+h5py
+scipy
+tqdm
+pillow
+ipykernel
+tensorflow
+helper
+mpl_toolkits
+datetime

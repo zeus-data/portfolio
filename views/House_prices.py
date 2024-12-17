@@ -3,7 +3,7 @@
 import streamlit as st
 st.title(' Predicting Boston house prices')  
 
-st.image('Boston_houses_USA.png', width=800)
+st.image('images/Boston_houses_USA.png', width=800)
 
 st.write('''In this project, I will evaluate the performance and predictive power of a model
           that has been trained and tested on data collected from homes in suburbs of Boston,
