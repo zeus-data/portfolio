@@ -12,7 +12,7 @@ import streamlit as st
 # st.image('images/atlantis.png')
 
 
-st.write('''# Movie Ratings at netflix
+st.write('''# Movie Ratings at Netflix
 
 As a Data Analyst at Netflix, I would be interested in examining the 
          similarities and differences in people's movie preferences based
@@ -28,7 +28,6 @@ code='''import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.sparse import csr_matrix
-import helper
 from sklearn.metrics import silhouette_samples, silhouette_score
 import itertools
 from mpl_toolkits.axes_grid1 import make_axes_locatable
