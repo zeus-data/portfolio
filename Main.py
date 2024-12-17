@@ -35,7 +35,7 @@ project4 = st.Page(
 
 project5 = st.Page(
     page="views/Movies.py",
-    title = 'Netflix 🔜  🔧 🔨',
+    title = 'Netflix 🆕',
     icon='🍿'
 )
 
