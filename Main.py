@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title="Projects by Dimitri", layout="wide", page_icon='⚡')
+st.set_page_config(page_title="Projects by Dimitri", layout="centered", page_icon='⚡')
 
 main_page = st.Page(
     page='views/About_me.py',
