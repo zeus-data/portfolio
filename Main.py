@@ -46,8 +46,14 @@ project6 = st.Page(
 )
 
 project7 = st.Page(
+    page="views/Website.py",
+    title = 'A better website 🔜  🔧 🔨',
+    icon='👩‍💻'
+)
+
+project8 = st.Page(
     page="views/Titanic.py",
-    title = 'Titanic 🆕',
+    title = 'Titanic (Decision 🌳🌳  algo)  🆕',
     icon='🚢'
 )
 
@@ -57,7 +63,8 @@ pg= st.navigation({
      "Unsupervised Machine Learning": [ project4, project5],
      "Deep Learning": [ project3] ,
      "Data Engineering with Microsoft Azure": [project6],
-     "Mini-Projects": [project7]})
+     "A/B Test - Null Hypothesis": [project7],
+     "Mini-Projects": [project8]})
 
 pg.run()
 
