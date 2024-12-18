@@ -45,12 +45,19 @@ project6 = st.Page(
     icon='🏢'
 )
 
+project7 = st.Page(
+    page="views/Titanic.py",
+    title = 'Titanic 🔜  🔧 🔨',
+    icon='🚢'
+)
+
 pg= st.navigation({
     "Info": [main_page],
      "Supervised Machine Learning": [project1, project2],
      "Unsupervised Machine Learning": [ project4, project5],
      "Deep Learning": [ project3] ,
-     "Data Engineering with Microsoft Azure": [project6]})
+     "Data Engineering with Microsoft Azure": [project6],
+     "Mini-Projects": [project7]})
 
 pg.run()
 
