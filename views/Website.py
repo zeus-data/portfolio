@@ -373,11 +373,7 @@ for s in range(100):
     
 
 st.write('''**i. Histogram**
-Plot a histogram of the **p_diffs**.  Does this plot look like what you expected?
-           Use the matching problem in the classroom to assure you fully understand what was
-          computed here.
-Also, use `plt.axvline()` method to mark the actual difference observed  in the `df2` data 
-         (recall `obs_diff`), in the chart.''')
+''')
 
 code='''plt.hist(p_diffs)
 plt.title('Graph of the converted probability difference p_new - p_old')
@@ -387,13 +383,14 @@ plt.axvline(x = obs_diff, color = 'red', linewidth = 2);'''
 st.code(code)
 
 
+fig, ax = plt.subplots()
 
-plt.hist(p_diffs)
-plt.title('Graph of the converted probability difference p_new - p_old')
-plt.xlabel('Difference')
-plt.ylabel('Frequency')
-plt.axvline(x = obs_diff, color = 'red', linewidth = 2)
-st.pyplot(plt)
+ax.hist(p_diffs)
+ax.set_title('Graph of the converted probability difference p_new - p_old')
+ax.set_xlabel('Difference')
+ax.set_ylabel('Frequency')
+ax.axvline(x = obs_diff, color = 'red', linewidth = 2)
+st.pyplot(fig)
 
 
 st.write('''**j.** What proportion of the **p_diffs** are greater
