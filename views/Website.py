@@ -571,9 +571,7 @@ program_.summary2()'''
 st.code(code)
 
 
-# buffer = io.StringIO()
-# df2.info(buf=buffer)
-# s = buffer.getvalue()
+
 
 # st.text(s)
 import scipy.stats as stats
@@ -581,12 +579,10 @@ lreg_model = sm.Logit(df2['converted'], df2[['intercept', 'ab_page']])
 program_ = lreg_model.fit()
 
 
-
-# Get the summary as a string
-summary_str = program_.summary2().as_text()
+summary_html = program_.summary2().as_html()
 
 # Display the summary in Streamlit
-st.text(summary_str)
+st.markdown(summary_html, unsafe_allow_html=True)
 
 
 
@@ -660,11 +656,6 @@ summary_html = result_1.summary2().as_html()
 st.markdown(summary_html, unsafe_allow_html=True)
 
  
-# summary_str = result_1.summary2().as_text()
-
-# # Display the summary in Streamlit
-# st.text(summary_str)
-
 
 code='''log_2 = sm.Logit(new_df['converted'], new_df[['intercept', 'ab_page', 'UK', 'CA']])
 result_2 = log_2.fit()
@@ -675,11 +666,10 @@ log_2 = sm.Logit(new_df['converted'], new_df[['intercept', 'ab_page', 'UK', 'CA'
 result_2 = log_2.fit()
 result_2.summary2()
 
-
-summary_str = result_2.summary2().as_text()
+summary_html = result_2.summary2().as_html()
 
 # Display the summary in Streamlit
-st.text(summary_str)
+st.markdown(summary_html, unsafe_allow_html=True)
 
 st.write('''The statistical results show high p-values, specifically greater than 0.05. 
          This indicates that the country parameter does not significantly impact
@@ -717,10 +707,10 @@ st.code(code)
 
 log_3 = sm.Logit(new_df['converted'], new_df[['intercept', 'UK', 'CA', 'UK_abpage', 'CA_abpage']])
 result3 = log_3.fit()
-summary_str=result3.summary2().as_text()
+summary_html = result3.summary2().as_html()
 
 # Display the summary in Streamlit
-st.text(summary_str)
+st.markdown(summary_html, unsafe_allow_html=True)
 
 code='''log_4 = sm.Logit(new_df['converted'], new_df[['intercept','ab_page', 'UK', 'CA', 'UK_abpage', 'CA_abpage']])
 result4 = log_4.fit()
@@ -730,8 +720,10 @@ st.code(code)
 
 log_4 = sm.Logit(new_df['converted'], new_df[['intercept','ab_page', 'UK', 'CA', 'UK_abpage', 'CA_abpage']])
 result4 = log_4.fit()
-summary_str = result4.summary2().as_text()
-st.text(summary_str)
+ssummary_html = result4.summary2().as_html()
+
+# Display the summary in Streamlit
+st.markdown(summary_html, unsafe_allow_html=True)
 
 code='''print(np.exp(0.0314)), print(np.exp(-0.0469));'''
 st.code(code)
