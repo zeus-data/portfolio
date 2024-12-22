@@ -47,7 +47,7 @@ project6 = st.Page(
 
 project7 = st.Page(
     page="views/Website.py",
-    title = 'A better website 🔜  🔧 🔨',
+    title = 'Website',
     icon='👩‍💻'
 )
 

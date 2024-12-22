@@ -13,6 +13,6 @@ tqdm
 pillow
 ipykernel
 tensorflow
-
+statsmodels
 
 
