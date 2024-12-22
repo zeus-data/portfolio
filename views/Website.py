@@ -654,12 +654,16 @@ st.code(code)
 
 log_1 = sm.Logit(new_df['converted'], new_df[['intercept', 'UK', 'CA']])
 result_1 = log_1.fit()
-
- 
-summary_str = result_1.summary2().as_text()
+summary_html = result_1.summary2().as_html()
 
 # Display the summary in Streamlit
-st.text(summary_str)
+st.markdown(summary_html, unsafe_allow_html=True)
+
+ 
+# summary_str = result_1.summary2().as_text()
+
+# # Display the summary in Streamlit
+# st.text(summary_str)
 
 
 code='''log_2 = sm.Logit(new_df['converted'], new_df[['intercept', 'ab_page', 'UK', 'CA']])
