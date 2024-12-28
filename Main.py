@@ -41,8 +41,8 @@ project5 = st.Page(
 
 project6 = st.Page(
     page="views/DW.py",
-    title = 'DW with Azure Synapse 🔜  🔧 🔨',
-    icon='🏢'
+    title = 'Bikes 🆕',
+    icon='🛞'
 )
 
 project7 = st.Page(

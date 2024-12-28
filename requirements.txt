@@ -14,5 +14,6 @@ pillow
 ipykernel
 tensorflow
 statsmodels
+psycopg
 
 
