@@ -9,12 +9,10 @@ import streamlit as st
 
 # st.write('''#### Work in Progress . . . ''')
 
-# st.image('images/atlantis.png')
 
-
-st.write('''# Movie Ratings at Netflix
-
-As a Data Analyst at Netflix, I would be interested in examining the 
+# st.write('''# Movie Ratings at Netflix''')
+st.image('images/Netflix_Zeus.png')
+st.write('''As a Data Analyst at Netflix, I would be interested in examining the 
          similarities and differences in people's movie preferences based
           on their ratings. Understanding these ratings could help enhance
           a movie recommendation system for users. By the end of this project, 
