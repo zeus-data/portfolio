@@ -154,7 +154,7 @@ from sklearn.metrics import accuracy_score
 train_accuracy = accuracy_score(y_train, y_train_pred)
 test_accuracy = accuracy_score(y_test, y_test_pred)
 print(f' The training accuracy is {train_accuracy:.1%}')
-print(f'The testing accuracy is {test_accuracy:.1%}:')'''
+print(f'The testing accuracy is {test_accuracy:.1%}')'''
 st.code(code)
 
 # Making predictions
