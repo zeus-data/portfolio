@@ -3,7 +3,6 @@ numpy
 pandas
 seaborn
 matplotlib
-IPython
 scikit-learn
 keras
 opencv-python
