@@ -7,7 +7,7 @@ scikit-learn
 keras
 opencv-python
 h5py
-scipy
+scipy==1.15.1
 tqdm
 pillow
 ipykernel
